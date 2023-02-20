@@ -1,6 +1,6 @@
 //playground canvas 
 var blockSize = 20;
-var total_row = 27; //total number of rows 
+var total_row = 25; //total number of rows 
 var total_col = 30; //total number of coloumns
 var board;
 var context;
