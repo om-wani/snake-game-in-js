@@ -92,22 +92,22 @@ function update(){
 
 //movement of snake
 function changeDirection(e){
-    if (e.code == "ArrowUp" && speedY != 1){
+    if (e.code == "ArrowUp" && speedY != -1 || e.code == "W" && speedY != -1){
         //when up arrow key pressed snake will move up
         speedX = 0;
         speedY = -1;
     }
-    else if (e.code == "ArrowDown" && speedY != 1){
+    else if (e.code == "ArrowDown" && speedY != 1 || e.code == "S" && speedY != 1){
         //when down arrow pressed snake will move down 
         speedX = 0;
         speedY = 1;
     }
-    else if (e.code == "ArrowLeft" && speedX != -1){
+    else if (e.code == "ArrowLeft" && speedX != -1 || e.code == "A" && speedX != -1){
         //when left arrow pressed snake will move left 
         speedX = -1;
         speedY = 0;
     }
-    else if (e.code == "ArrowRight" && speedX != 1){
+    else if (e.code == "ArrowRight" && speedX != 1 || e.code == "D" && speedX != 1){
         //when right arrow pressed snake will move right 
         speedX = 1;
         speedY = 0;
