@@ -155,6 +155,8 @@ var FoodPositionY;
 //current game status
 var GameOver = false;
 
+
+
 window.onload = function (){
     //setting Canvas height and width
     Canvas = document.getElementById("canvas");
@@ -191,7 +193,7 @@ function update(){
     Context1.fillRect(0, 0, Canvas1.width, Canvas1.height);*/
 
     //food color and position
-    Context.fillStyle = "red";
+    Context.fillStyle = "white";
     Context.fillRect(FoodPositionX, FoodPositionY, SizeofBox, SizeofBox);
 
     //randomize food
@@ -208,7 +210,7 @@ function update(){
         SnakeBody[0] = [SnakeShapeX, SnakeShapeY];
     }
 
-    Context.fillStyle = "white";
+    Context.fillStyle = "red";
     SnakeShapeX += SnakeSpeedX * SizeofBox;
     SnakeShapeY += SnakeSpeedY * SizeofBox;
     Context.fillRect(SnakeShapeX, SnakeShapeY, SizeofBox, SizeofBox);
@@ -268,3 +270,8 @@ function placeFood(){
     FoodPositionY = Math.floor(Math.random() * NumberofRows) * SizeofBox;
 }
 
+document.addEventListener('keydown', PageReload);
+function PageReload(e){
+    if(GameOver = true && e.code == "Enter")
+    location.reload();
+}
