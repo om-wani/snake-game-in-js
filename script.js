@@ -136,3 +136,11 @@ function PageReload(e){
     if(GameOver = true && e.code == "Enter")
     location.reload();
 }
+
+
+//code to prevent browser screen from scrolling when arrow keys are pressed
+window.addEventListener("keydown", function(e) {
+    if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
+        e.preventDefault();
+    }
+}, false);
